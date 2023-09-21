@@ -1,0 +1,45 @@
+
+/* Path: assets/css/responsive.css */
+
+/*---------------------------
+    Responsive css for tab
+-----------------------------*/
+@media only screen and (max-width: 768px) {
+    
+
+    /*------------------------
+    * Pricing table
+    --------------------------*/
+    .abc-ele-pricing-pack-name {
+        min-height: 50px;
+        width: 200px;
+    }
+    .abc-ele-pricing-pack-preiod {
+        top: 80px;
+    }
+    .abc-ele-pricing-header-strock {
+        margin-top: -108px;
+    }
+    .abc-ele-pricing-table-footer a {
+        padding: 15px 29px;
+    }
+
+
+}
+
+/*---------------------------
+    Responsive css for mobile
+-----------------------------*/
+@media only screen and (max-width: 480px) {    
+
+
+    /*------------------------
+    * Pricing table
+    --------------------------*/
+    .abc-ele-pricing-table-footer a {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+
+}
