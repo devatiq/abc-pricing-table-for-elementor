@@ -13,7 +13,7 @@ class Main extends BaseWidget
 {
 
     // define protected variables...
-    protected $name = 'ABCPricingTable';
+    protected $name = 'ABCPricingTableElementor';
     protected $title = 'Pricing Table';
     protected $icon = 'eicon-price-table';
     protected $categories = [
@@ -124,28 +124,28 @@ class Main extends BaseWidget
         // Pricing body features list
         $repeater = new \Elementor\Repeater();
 
-         // feature text
+        // feature text
         $repeater->add_control(
-			'abc_elementor_pricingTable_feature_text',           
-            [                
+            'abc_elementor_pricingTable_feature_text',
+            [
                 'label' => esc_html__('Text', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
                 'placeholder' => esc_html__('5GB Disk Space', ABCPTE_TEXTDOMAIN),
                 'label_block' => true,
             ],
-		);
+        );
         // feature icon
         $repeater->add_control(
-            'abc_elementor_pricingTable_feature_icon',           
-            [                
+            'abc_elementor_pricingTable_feature_icon',
+            [
                 'label' => esc_html__('Icon', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::ICONS,
             ],
         );
         // icon color
         $repeater->add_control(
-            'abc_elementor_pricingTable_feature_icon_color',           
-            [                
+            'abc_elementor_pricingTable_feature_icon_color',
+            [
                 'label' => esc_html__('Icon Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
@@ -155,22 +155,22 @@ class Main extends BaseWidget
         );
         // Feature list
         $this->add_control(
-			'abc_pricingTable_features_list',
-			[
-				'label' => esc_html__( 'Features List', ABCPTE_TEXTDOMAIN),
-				'type' => Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
-				'default' => [
-					[
-						'abc_elementor_pricingTable_feature_text' => esc_html__( 'Title #1', ABCPTE_TEXTDOMAIN ),
-					],
-					[
-						'abc_elementor_pricingTable_feature_text' => esc_html__( 'Title #2', ABCPTE_TEXTDOMAIN ),
-					],
-				],
-				'title_field' => '{{{ abc_elementor_pricingTable_feature_text }}}',
-			]
-		);
+            'abc_pricingTable_features_list',
+            [
+                'label' => esc_html__('Features List', ABCPTE_TEXTDOMAIN),
+                'type' => Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'abc_elementor_pricingTable_feature_text' => esc_html__('Title #1', ABCPTE_TEXTDOMAIN),
+                    ],
+                    [
+                        'abc_elementor_pricingTable_feature_text' => esc_html__('Title #2', ABCPTE_TEXTDOMAIN),
+                    ],
+                ],
+                'title_field' => '{{{ abc_elementor_pricingTable_feature_text }}}',
+            ]
+        );
 
         // end of Pricing body section
         $this->end_controls_section();
@@ -369,6 +369,24 @@ class Main extends BaseWidget
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-header-strock svg path' => 'fill: {{VALUE}};',
                 ],
+            ]
+        );
+        // header stcoke speace
+        $this->add_responsive_control(
+            'abc_elementor_pricingTable_header_normal_stroke_space',
+            [
+                'label' => __('Stroke Space', ABCPTE_TEXTDOMAIN),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .abc-ele-pricing-header-strock' => 'margin-top: {{SIZE}}{{UNIT}};',
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => -124,
+                ],
+
+
             ]
         );
         // pacakge name color
@@ -749,7 +767,6 @@ class Main extends BaseWidget
      * @access protected
      */
     protected function render()
-
     {
         //load render view to show widget output on frontend/website.
         include 'RenderView.php';
