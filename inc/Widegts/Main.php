@@ -1,8 +1,8 @@
 <?php
 
-namespace Inc\Widgets\ABCPricingTable;
+namespace ABCPTE\Inc\Widgets\ABCPricingTable;
 
-use Inc\Widgets\BaseWidget;
+use ABCPTE\Inc\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;

@@ -40,10 +40,6 @@ if (!defined('ABCPTE_TEXTDOMAIN')) {
     define('ABCPTE_TEXTDOMAIN', 'abccf7');
 }
 
-// Define ABCPTE_VERSION.
-if (!defined('ABCPTE_VERSION')) {
-    define('ABCPTE_VERSION', '1.0');
-}
 
 // require addtional files
 require_once ABCPTE_PLUGIN_DIR . 'inc/functions.php';

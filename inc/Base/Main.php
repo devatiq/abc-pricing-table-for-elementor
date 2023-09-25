@@ -110,10 +110,10 @@ class ABCPricingTableForElementor {
      
      public function setConstants()
      {
-        define( 'ABC_CF7_STYLER_VERSION', $this->version );
-        define( 'ABC_CF7_STYLER_MINIMUM_ELEMENTOR_VERSION', self::MINIMUM_ELEMENTOR_VERSION );
-        define( 'ABC_CF7_STYLER_MINIMUM_PHP_VERSION', self::MINIMUM_PHP_VERSION );
-        define('ABCPTE_NAME', 'ABC CF7 Styler for Elementor');       
+        define( 'ABCPTE_VERSION', $this->version );
+        define( 'ABCPTE_MINIMUM_ELEMENTOR_VERSION', self::MINIMUM_ELEMENTOR_VERSION );
+        define( 'ABCPTE_MINIMUM_PHP_VERSION', self::MINIMUM_PHP_VERSION );
+        define('ABCPTE_NAME', 'ABC Pricing Table for Elementor');       
 
      }
 
@@ -125,10 +125,10 @@ class ABCPricingTableForElementor {
      */
     public function ABCPTE_enqueue_styles() {
         wp_enqueue_style(
-            'ABCPTEstyler-custom-styles', // Unique handle for your stylesheet
-            ABC_CF7_STYLER_PLUGIN_URL . '/assets/css/style.css', // URL to your style.css file
+            'ABCPTE-custom-styles', // Unique handle for your stylesheet
+            ABCPTE_PLUGIN_URL . '/assets/css/style.css', // URL to your style.css file
             [], // Dependencies 
-            ABC_CF7_STYLER_VERSION, // Version number
+            ABCPTE_VERSION, // Version number
             'all' // Media type
         );
     }
@@ -305,12 +305,12 @@ class ABCPricingTableForElementor {
     public function register_widgets($widgets_manager) {
 
 		// Include Widget configurations
-		require_once ABC_CF7_STYLER_PLUGIN_DIR . '/includes/BaseWidgets.php'; 
+		require_once ABCPTE_PLUGIN_DIR . '/inc/Base/BaseWidgets.php'; 
 
         // Include Widget configurations      
-		require_once ABC_CF7_STYLER_PLUGIN_DIR . '/includes/Widgets/Main.php';        
+		require_once ABCPTE_PLUGIN_DIR . '/inc/Widgets/Main.php';        
         
-        $widgets_manager->register(new \includes\Widgets\ABCPTE\Main());
+        $widgets_manager->register(new \ABCPTE\Inc\Widgets\ABCPricingTable\Main());
         
     }
 
