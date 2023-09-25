@@ -36,8 +36,8 @@ if (!defined('ABCPTE_PLUGIN_BASENAME')) {
 }
 
 // Define ABCPTE_TEXT_DOMAIN.
-if (!defined('ABCPTE_TEXT_DOMAIN')) {
-    define('ABCPTE_TEXT_DOMAIN', 'abccf7');
+if (!defined('ABCPTE_TEXTDOMAIN')) {
+    define('ABCPTE_TEXTDOMAIN', 'abccf7');
 }
 
 // Define ABCPTE_VERSION.

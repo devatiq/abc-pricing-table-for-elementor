@@ -45,7 +45,6 @@ class ABCPricingTableForElementor {
 	 * @since 1.0.0
 	 * @access private
 	 * @static
-	 * @var \Elementor_Test_Addon\Plugin The single instance of the class.
 	 */
 	private static $_instance = null;
 
@@ -57,7 +56,6 @@ class ABCPricingTableForElementor {
 	 * @since 1.0.0
 	 * @access public
 	 * @static
-	 * @return \Elementor_Test_Addon\Plugin An instance of the class.
 	 */
 	public static function instance() {
 
@@ -181,9 +179,9 @@ class ABCPricingTableForElementor {
 
         $message = sprintf(
             /* translators: 1: Plugin Name 2: Elementor */
-            esc_html__('"%1$s" requires "%2$s" to be installed and activated.', ABC_CF7_STYLER_TEXT_DOMAIN),
-            '<strong>' . esc_html__(ABCPTE_NAME, ABC_CF7_STYLER_TEXT_DOMAIN) . '</strong>',
-            '<strong>' . esc_html__('Elementor', ABC_CF7_STYLER_TEXT_DOMAIN) . '</strong>'
+            esc_html__('"%1$s" requires "%2$s" to be installed and activated.', ABCPTE_TEXTDOMAIN),
+            '<strong>' . esc_html__(ABCPTE_NAME, ABCPTE_TEXTDOMAIN) . '</strong>',
+            '<strong>' . esc_html__('Elementor', ABCPTE_TEXTDOMAIN) . '</strong>'
         );
 
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
@@ -204,9 +202,9 @@ class ABCPricingTableForElementor {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', ABC_CF7_STYLER_TEXT_DOMAIN ),
-			'<strong>' . esc_html__(ABCPTE_NAME, ABC_CF7_STYLER_TEXT_DOMAIN) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', ABC_CF7_STYLER_TEXT_DOMAIN ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', ABCPTE_TEXTDOMAIN ),
+			'<strong>' . esc_html__(ABCPTE_NAME, ABCPTE_TEXTDOMAIN) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', ABCPTE_TEXTDOMAIN ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -228,9 +226,9 @@ class ABCPricingTableForElementor {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', ABC_CF7_STYLER_TEXT_DOMAIN ),
-			'<strong>' . esc_html__(ABCPTE_NAME, ABC_CF7_STYLER_TEXT_DOMAIN) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', ABC_CF7_STYLER_TEXT_DOMAIN ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', ABCPTE_TEXTDOMAIN ),
+			'<strong>' . esc_html__(ABCPTE_NAME, ABCPTE_TEXTDOMAIN) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', ABCPTE_TEXTDOMAIN ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 		);
 
@@ -277,7 +275,7 @@ class ABCPricingTableForElementor {
             update_option('ABCPTE_installed', time());
         }
 
-        update_option('ABCPTE_installed', ABC_CF7_STYLER_TEXT_DOMAIN);
+        update_option('ABCPTE_installed', ABCPTE_TEXTDOMAIN);
     }
 
     /**
