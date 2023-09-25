@@ -125,9 +125,16 @@ class ABCPricingTableForElementor {
      */
     public function ABCPTE_enqueue_styles() {
         wp_enqueue_style(
-            'ABCPTE-custom-styles', // Unique handle for your stylesheet
+            'ABCPTE-custom-style', // Unique handle for your stylesheet
             ABCPTE_PLUGIN_URL . '/assets/css/style.css', // URL to your style.css file
             [], // Dependencies 
+            ABCPTE_VERSION, // Version number
+            'all' // Media type
+        );
+        wp_enqueue_style(
+            'ABCPTE-responsive', // Unique handle for your stylesheet
+            ABCPTE_PLUGIN_URL . '/assets/css/responsive.css', // URL to your style.css file
+            array('ABCPTE-custom-style'), // Dependencies 
             ABCPTE_VERSION, // Version number
             'all' // Media type
         );
