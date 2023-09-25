@@ -312,10 +312,10 @@ class ABCPricingTableForElementor {
     public function register_widgets($widgets_manager) {
 
 		// Include Widget configurations
-		require_once ABCPTE_PLUGIN_DIR . '/inc/Base/BaseWidgets.php'; 
+		require_once ABCPTE_PLUGIN_DIR . 'inc/Base/BaseWidgets.php'; 
 
         // Include Widget configurations      
-		require_once ABCPTE_PLUGIN_DIR . '/inc/Widgets/Main.php';        
+		require_once ABCPTE_PLUGIN_DIR . 'inc/Widgets/Main.php';        
         
         $widgets_manager->register(new \ABCPTE\Inc\Widgets\ABCPricingTable\Main());
         

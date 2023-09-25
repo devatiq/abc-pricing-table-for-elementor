@@ -24,20 +24,17 @@ if (!defined('ABCPTE_PLUGIN_FILE')) {
 }
 // Define ABCPTE_PLUGIN_DIR.
 if (!defined('ABCPTE_PLUGIN_DIR')) {
-    define('ABCPTE_PLUGIN_DIR', plugin_dir_path(__FILE__));
+    define('ABCPTE_PLUGIN_DIR', plugin_dir_path(ABCPTE_PLUGIN_FILE));
 }
 // Define ABCPTE_PLUGIN_URL.
 if (!defined('ABCPTE_PLUGIN_URL')) {
-    define('ABCPTE_PLUGIN_URL', plugins_url('', __FILE__));
+    define('ABCPTE_PLUGIN_URL', plugins_url('', ABCPTE_PLUGIN_FILE));
 }
-// Define ABCPTE_PLUGIN_BASENAME.
-if (!defined('ABCPTE_PLUGIN_BASENAME')) {
-    define('ABCPTE_PLUGIN_BASENAME', plugin_basename(__FILE__));
-}
+
 
 // Define ABCPTE_TEXT_DOMAIN.
 if (!defined('ABCPTE_TEXTDOMAIN')) {
-    define('ABCPTE_TEXTDOMAIN', 'abccf7');
+    define('ABCPTE_TEXTDOMAIN', 'ABCPTE');
 }
 
 
