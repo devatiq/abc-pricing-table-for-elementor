@@ -1,5 +1,5 @@
 <?php
-namespace ABCPTESTYLER;
+namespace ABCPTE;
 /**
 * ABCPTEElementorPack.
 * Main plugin class that holds entire plugin.
@@ -13,7 +13,7 @@ defined('ABSPATH') or die('This is not the place you deserve!');
 
 
 
-class ABCPTESTYLER {
+class ABCPricingTableForElementor {
 	/**
 	 * Addon Version
 	 *
