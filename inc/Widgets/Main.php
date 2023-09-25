@@ -36,7 +36,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_header_section',
             [
-                'label' => __('Pricing Header', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Pricing Header', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -44,9 +44,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_name',
             [
-                'label' => __('Package Name', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Package Name', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Basic Plan', ABCELEMENTOR_TEXTDOMAIN),
+                'default' => __('Basic Plan', ABCPTE_TEXTDOMAIN),
                 'label_block' => true,
             ]
         );
@@ -54,28 +54,28 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_price',
             [
-                'label' => __('Price', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Price', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('$499', ABCELEMENTOR_TEXTDOMAIN),
+                'default' => __('$499', ABCPTE_TEXTDOMAIN),
             ]
         );
         // Pricing package Price period
         $this->add_control(
             'abc_elementor_pricingTable_price_period',
             [
-                'label' => __('Period', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Period', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('/Monthly', ABCELEMENTOR_TEXTDOMAIN),
+                'default' => __('/Monthly', ABCPTE_TEXTDOMAIN),
             ]
         );
         // Pricing package Recommended
         $this->add_control(
             'abc_elementor_pricingTable_recommended',
             [
-                'label' => __('Recommended', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Yes', ABCELEMENTOR_TEXTDOMAIN),
-                'label_off' => __('No', ABCELEMENTOR_TEXTDOMAIN),
+                'label_on' => __('Yes', ABCPTE_TEXTDOMAIN),
+                'label_off' => __('No', ABCPTE_TEXTDOMAIN),
                 'return_value' => 'yes',
                 'default' => 'no',
             ]
@@ -84,12 +84,12 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_recommended_position',
             [
-                'label' => __('Recommended Position', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Position', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'top',
                 'options' => [
-                    'left' => __('Left', ABCELEMENTOR_TEXTDOMAIN),
-                    'top' => __('Top', ABCELEMENTOR_TEXTDOMAIN),
+                    'left' => __('Left', ABCPTE_TEXTDOMAIN),
+                    'top' => __('Top', ABCPTE_TEXTDOMAIN),
                 ],
                 'condition' => [
                     'abc_elementor_pricingTable_recommended' => 'yes',
@@ -100,9 +100,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_recommended_text',
             [
-                'label' => __('Recommended Text', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Text', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Recommended', ABCELEMENTOR_TEXTDOMAIN),
+                'default' => __('Recommended', ABCPTE_TEXTDOMAIN),
                 'condition' => [
                     'abc_elementor_pricingTable_recommended' => 'yes',
                 ],
@@ -116,7 +116,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_body_section',
             [
-                'label' => __('Package Features', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Package Features', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -128,9 +128,9 @@ class Main extends BaseWidget
         $repeater->add_control(
 			'abc_elementor_pricingTable_feature_text',           
             [                
-                'label' => esc_html__('Text', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Text', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'placeholder' => esc_html__('5GB Disk Space', ABCELEMENTOR_TEXTDOMAIN),
+                'placeholder' => esc_html__('5GB Disk Space', ABCPTE_TEXTDOMAIN),
                 'label_block' => true,
             ],
 		);
@@ -138,7 +138,7 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abc_elementor_pricingTable_feature_icon',           
             [                
-                'label' => esc_html__('Icon', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Icon', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::ICONS,
             ],
         );
@@ -146,7 +146,7 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abc_elementor_pricingTable_feature_icon_color',           
             [                
-                'label' => esc_html__('Icon Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Icon Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-body ul {{CURRENT_ITEM}} i' => 'color: {{VALUE}}',
@@ -157,15 +157,15 @@ class Main extends BaseWidget
         $this->add_control(
 			'abc_pricingTable_features_list',
 			[
-				'label' => esc_html__( 'Features List', ABCELEMENTOR_TEXTDOMAIN),
+				'label' => esc_html__( 'Features List', ABCPTE_TEXTDOMAIN),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'abc_elementor_pricingTable_feature_text' => esc_html__( 'Title #1', ABCELEMENTOR_TEXTDOMAIN ),
+						'abc_elementor_pricingTable_feature_text' => esc_html__( 'Title #1', ABCPTE_TEXTDOMAIN ),
 					],
 					[
-						'abc_elementor_pricingTable_feature_text' => esc_html__( 'Title #2', ABCELEMENTOR_TEXTDOMAIN ),
+						'abc_elementor_pricingTable_feature_text' => esc_html__( 'Title #2', ABCPTE_TEXTDOMAIN ),
 					],
 				],
 				'title_field' => '{{{ abc_elementor_pricingTable_feature_text }}}',
@@ -179,7 +179,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_footer_section',
             [
-                'label' => __('Button', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Button', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -187,9 +187,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_button_text',
             [
-                'label' => __('Button Text', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Button Text', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Purchase Now', ABCELEMENTOR_TEXTDOMAIN),
+                'default' => __('Purchase Now', ABCPTE_TEXTDOMAIN),
                 'label_block' => true,
             ]
         );
@@ -197,9 +197,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_button_link',
             [
-                'label' => __('Button Link', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Button Link', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __('https://your-link.com', ABCELEMENTOR_TEXTDOMAIN),
+                'placeholder' => __('https://your-link.com', ABCPTE_TEXTDOMAIN),
                 'show_external' => true,
                 'default' => [
                     'url' => '#',
@@ -212,7 +212,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_button_icon',
             [
-                'label' => __('Button Icon', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Button Icon', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::ICONS,
                 'default' => [
                     'value' => 'fas fa-arrow-right',
@@ -225,7 +225,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_elementor_pricingTable_button_icon_space',
             [
-                'label' => __('Icon Space', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Icon Space', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -247,7 +247,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_box_style_section',
             [
-                'label' => __('Box', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Box', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -257,7 +257,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abc_elementor_pricingTable_box_bg',
                 'types' => ['classic', 'gradient'],
-                'label' => __('Background', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Background', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-table-area',
             ]
         );
@@ -274,7 +274,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_elementor_pricingTable_box_border_radius',
             [
-                'label' => __('Border Radius', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Border Radius', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -291,7 +291,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_header_style_section',
             [
-                'label' => __('Header', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Header', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -300,7 +300,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_pricingTable_name_typography',
-                'label' => __('Name Typography', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Name Typography', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-pack-name h3',
             ]
         );
@@ -309,7 +309,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_pricingTable_price_typography',
-                'label' => __('Price Typography', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Price Typography', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-pack-preiod h3',
             ]
         );
@@ -318,7 +318,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_pricingTable_price_period_typography',
-                'label' => __('Period Typography', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Period Typography', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-pack-preiod h3 sub',
             ]
         );
@@ -327,7 +327,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_pricingTable_recommended_typography',
-                'label' => __('Recommended Typography', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Typography', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-recommended span',
                 'condition' => [
                     'abc_elementor_pricingTable_recommended' => 'yes',
@@ -344,14 +344,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_header_style_normal_tab',
             [
-                'label' => esc_html__('Normal', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Normal', ABCPTE_TEXTDOMAIN),
             ]
         );
         // header normal background color
         $this->add_control(
             'abc_elementor_pricingTable_header_normal_bg_color',
             [
-                'label' => __('Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -363,7 +363,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_header_normal_stroke_color',
             [
-                'label' => __('Stroke Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Stroke Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#FD5009',
                 'selectors' => [
@@ -375,7 +375,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_name_color',
             [
-                'label' => __('Name Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Name Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-pack-name h3' => 'color: {{VALUE}};',
@@ -386,7 +386,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_name_bg_color',
             [
-                'label' => __('Name Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Name Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-pack-name' => 'background-color: {{VALUE}};',
@@ -397,7 +397,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_price_color',
             [
-                'label' => __('Price Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Price Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-pack-preiod h3' => 'color: {{VALUE}};',
@@ -408,7 +408,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_price_period_color',
             [
-                'label' => __('Period Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Period Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-pack-preiod h3 sub' => 'color: {{VALUE}};',
@@ -419,7 +419,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_recommended_color',
             [
-                'label' => __('Recommended Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-recommended span' => 'color: {{VALUE}};',
@@ -433,7 +433,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_recommended_bg_color',
             [
-                'label' => __('Recommended Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-recommended span' => 'background-color: {{VALUE}};',
@@ -452,14 +452,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_header_style_hover_tab',
             [
-                'label' => esc_html__('Hover', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Hover', ABCPTE_TEXTDOMAIN),
             ]
         );
         // header hover background color
         $this->add_control(
             'abc_elementor_pricingTable_header_hover_bg_color',
             [
-                'label' => __('Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-header-bg svg path' => 'fill: {{VALUE}};',
@@ -470,7 +470,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_header_hover_stroke_color',
             [
-                'label' => __('Stroke Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Stroke Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-header-strock svg path' => 'fill: {{VALUE}};',
@@ -481,7 +481,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_name_hover_color',
             [
-                'label' => __('Name Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Name Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-pack-name h3' => 'color: {{VALUE}};',
@@ -492,7 +492,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_name_hover_bg_color',
             [
-                'label' => __('Name Background', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Name Background', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-pack-name' => 'background-color: {{VALUE}};',
@@ -503,7 +503,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_price_hover_color',
             [
-                'label' => __('Price Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Price Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-pack-preiod h3' => 'color: {{VALUE}};',
@@ -514,7 +514,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_price_period_hover_color',
             [
-                'label' => __('Period Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Period Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-pack-preiod h3 sub' => 'color: {{VALUE}};',
@@ -525,7 +525,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_recommended_hover_color',
             [
-                'label' => __('Recommended Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-recommended span' => 'color: {{VALUE}};',
@@ -539,7 +539,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_recommended_hover_bg_color',
             [
-                'label' => __('Recommended Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Recommended Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-recommended span' => 'background-color: {{VALUE}};',
@@ -563,7 +563,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_body_style_section',
             [
-                'label' => __('Features', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Features', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -572,7 +572,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_pricingTable_features_typography',
-                'label' => __('Typography', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Typography', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-table-body ul li',
             ]
         );
@@ -580,7 +580,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_features_color',
             [
-                'label' => __('Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-body ul li' => 'color: {{VALUE}};',
@@ -591,7 +591,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_features_icon_color',
             [
-                'label' => __('Icons Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Icons Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-body ul i' => 'color: {{VALUE}};',
@@ -605,7 +605,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_pricingTable_footer_style_section',
             [
-                'label' => __('Button', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Button', ABCPTE_TEXTDOMAIN),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -614,7 +614,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_pricingTable_button_typography',
-                'label' => __('Typography', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Typography', ABCPTE_TEXTDOMAIN),
                 'selector' => '{{WRAPPER}} .abc-ele-pricing-table-footer a',
             ]
         );
@@ -622,7 +622,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_elementor_pricingTable_button_padding',
             [
-                'label' => __('Padding', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Padding', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -643,7 +643,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_elementor_pricingTable_button_border_radius',
             [
-                'label' => __('Border Radius', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Border Radius', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -660,14 +660,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_button_style_normal_tab',
             [
-                'label' => esc_html__('Normal', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Normal', ABCPTE_TEXTDOMAIN),
             ]
         );
         // pacakge button normal color
         $this->add_control(
             'abc_elementor_pricingTable_button_normal_color',
             [
-                'label' => __('Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -679,7 +679,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_button_normal_bg_color',
             [
-                'label' => __('Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-footer a' => 'background-color: {{VALUE}};',
@@ -692,14 +692,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_button_style_hover_tab',
             [
-                'label' => esc_html__('Hover', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => esc_html__('Hover', ABCPTE_TEXTDOMAIN),
             ]
         );
         // pacakge button hover color
         $this->add_control(
             'abc_elementor_pricingTable_button_hover_color',
             [
-                'label' => __('Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-table-footer a' => 'color: {{VALUE}};',
@@ -710,7 +710,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_button_hover_bg_color',
             [
-                'label' => __('Background Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Background Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-table-footer a' => 'background-color: {{VALUE}};',
@@ -721,7 +721,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_pricingTable_button_hover_border_color',
             [
-                'label' => __('Border Color', ABCELEMENTOR_TEXTDOMAIN),
+                'label' => __('Border Color', ABCPTE_TEXTDOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-pricing-table-area:hover .abc-ele-pricing-table-footer a' => 'border-color: {{VALUE}};',
